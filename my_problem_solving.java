@@ -232,7 +232,100 @@ public class my_problem_solving {
         System.out.println(" | '=' | ");
         System.out.println(" +-----+ ");
 		
+	//============================================================================
+		//       16.Java Exercises: Check whether Java is installed on your computer  
+//	   ============================================================================
+//		
+		    System.out.println("\nJava Version: "+System.getProperty("java.version"));
+	        System.out.println("Java Runtime Version: "+System.getProperty("java.runtime.version"));
+	        System.out.println("Java Home: "+System.getProperty("java.home"));
+	        System.out.println("Java Vendor: "+System.getProperty("java.vendor"));
+	        System.out.println("Java Vendor URL: "+System.getProperty("java.vendor.url"));
+	        System.out.println("Java Class Path: "+System.getProperty("java.class.path")+"\n");
+//	   17.Write a Java program to compare two numbers.
+//       ==========================================================================
+		    
+		    Scanner input = new Scanner(System.in);
+		    
+		    
+		    int number1;
+		    int number2;
+		    
+		    System.out.println("Enter Your First Number :");
+		    
+		    number1= input.nextInt();
+		    
+		    System.out.println("Enter Your Second Number :");
+		    number2= input.nextInt();
+		    
+		   if ( number1 == number2) {
+			   System.out.printf("%d == %d\n",number1, number2);
+			   
+		   }
+		   if(number1 != number2) {
+			   System.out.printf("%d != %d\n",number1, number2);
+		   }
+		   if(number1 > number2) {
+			   System.out.printf("%d > %d\n",number1, number2);
+		   }
+		   if(number1 <number2) {
+			   System.out.printf("%d < %d\n",number1, number2);
+		   }
+		   if(number1 >= number2) {
+			   System.out.printf("%d >= %d\n",number1, number2);
+		   }
+		   if(number1 <= number2) {
+			   System.out.printf("%d <= %d\n",number1, number2);
+		   }
+		    
+//		18.Write a Java program and compute the sum of the digits of an integer 
+//		    
+		  int num= 0 , rem=0 , sum=0;
+		  Scanner input = new Scanner(System.in);
+        System.out.print("Input an integer: ");
+        num = input.nextInt();
+        
+        while(num>0) {
+        	
+        	 rem = num%10;
+        	 
+        	 sum = sum+rem;
+        	 
+        	num= num/10;
+        }
+        System.out.println("The sum of the digits is: " + sum);
+
+     //  19. Write a Java program to compute the area of a hexagon.
+    //    =========================================================
+        double num;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input an integer: ");
+        num = input.nextDouble();
+        System.out.print("The area of the hexagon is: " + hexagonArea(num)+"\n");
+        
+      
+        // method 
+        public static double hexagonArea(double s){
+            return (6*(s*s))/(4*Math.tan(Math.PI/6));
+        }
+  	
+//		 20.Java Exercises: Compute the area of a polygon 
+//		======================================================
 		
+		double ns, side  ;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Input the number of sides on the polygon: ");
+		ns= input.nextDouble();
+		System.out.print("Input the length of one of the sides: ");
+		side= input.nextDouble();
+		
+		System.out.println("The area is: " + polygonArea(ns, side)+"\n");
+		    
+		 // method    
+		public static double polygonArea(double ns,double side) {
+			return (ns * (side * side)) / (4.0 * Math.tan((Math.PI / ns)));
+		}   
+		   
 		
 		
 		
